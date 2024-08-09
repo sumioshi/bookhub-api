@@ -65,3 +65,4 @@ trove-classifiers==2024.7.2
 tzdata==2024.1
 urllib3==2.2.2
 virtualenv==20.26.3
+whitenoise==6.7.0
