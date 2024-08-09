@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHub - Discord Theme</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Link para Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="server-sidebar">
+            <div class="server-icon">
+                <span>BH</span>
+            </div>
+        </div>
+
+        <div class="channel-sidebar">
+            <div class="server-name">
+                <h3>BookHub</h3>
+            </div>
+            <div class="channel-list">
+                <h4>Canal de Texo</h4>
+                <ul>
+                    <li># geral</li>
+                    <li># livros</li>
+                    <li># autores</li>
+                    <li># categorias</li>
+                </ul>
+                <h4>Canal de Voz</h4>
+                <ul>
+                    <li><i class="fas fa-volume-up"></i> Discussão</li>
+                    <div class="connected-user">
+                        <div class="connected-user-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="connected-user-details">
+                            <span class="connected-username">Sumioshi</span>
+                            <div class="connected-user-controls">
+                                <i class="fas fa-microphone-slash mute-red"></i>
+                                <i class="fas fa-headphones-alt mute-red"></i>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-details">
+                    <span class="username">Sumioshi</span>
+                    <span class="userid">#1234</span>
+                </div>
+                <div class="user-controls">
+                    <i class="fas fa-microphone-slash mute-red"></i>
+                    <i class="fas fa-headphones-alt mute-red"></i>
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="top-bar">
+                <h1># geral</h1>
+            </div>
+            <div class="content-area">
+                <div class="chat-message">
+                    <div class="chat-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="chat-content">
+                        <div class="chat-username">Sumioshi <span class="chat-time">Today at 12:34 PM</span></div>
+                        <button id="redirectBtn" class="discord-btn">Clique aqui para acessar o Books API</button>
+                    </div>
+                </div>
+            </div>
+            <div class="message-input-container">
+                <input type="text" placeholder="Mensagem #geral" class="message-input">
+                <div class="message-input-icons">
+                    <i class="fas fa-plus-circle"></i>
+                    <i class="fas fa-gift"></i>
+                    <i class="fas fa-image"></i>
+                    <i class="fas fa-smile"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('redirectBtn').addEventListener('click', function() {
+            window.location.href = '/api/books/';
+        });
+    </script>
+</body>
+</html>
